@@ -15,7 +15,7 @@ public class TA06Ejercicio12App {
  		
 		int ArrayNums[] = new int[TamañoArray];
  		
-		//Llenamos el Array1 y lo mostramos
+		//Llenamos el array y lo mostramos
  		llenarArray(ArrayNums);
 		mostrarArray(ArrayNums);
 	
@@ -32,19 +32,19 @@ public class TA06Ejercicio12App {
 		return ArrayNums;
 	}
 	
-	//Función que 
+	//Función que selecciona y guarda en un array todos los números que terminen por el número que le indiquemos
 	public static void seleccionarNumsTerminadosEn(int[] ArrayNums) {
 		String TextoNumero;
 		int Numero;
 		int ArrayNumsTerminadosEn[] = new int[ArrayNums.length];
 		String NumerosTerminadosEn = "";
 		
-		//Mostramos una ventana para introducir la cantidad de numeror aleatroios que queremos generar
+		//Mostramos una ventana para introducir el número en el que tiene que terminar
 		TextoNumero = JOptionPane.showInputDialog("Introduce un numero para buscar todos los que terminen por este");
 		Numero = Integer.parseInt(TextoNumero);
 		
 		for (int i=0; i<ArrayNums.length; i++) {
-			if(ArrayNums[i] % 10 == Numero){      //Si el número acaba en dos, se cuenta  
+			if(ArrayNums[i] % 10 == Numero){
 			ArrayNumsTerminadosEn[i]  = ArrayNums[i];
 			NumerosTerminadosEn += ArrayNumsTerminadosEn[i] + " ";
 			}
